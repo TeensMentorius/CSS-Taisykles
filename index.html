@@ -23,5 +23,161 @@
         <p>Svetainė pagrindinėms CSS taisyklėms prisiminti</p>
       </div>
     </section>
+    <main>
+      <section class="container">
+        <div class="container_description">
+          <h2 class="container_title">Teksto stilizavimas</h2>
+          <p class="container_subtitle">
+            Susipažink su teksto redagavimo galimybėmis taikant CSS taisykles.
+          </p>
+          <div class="builder">
+            <div class="builder_top">
+              <div class="previewCard">
+                <div class="previewHeader">
+                  <span class="badge">Demonstracija</span>
+                  <button class="btn ghost" id="resetBtn" type="button">
+                    Atkurti
+                  </button>
+                </div>
+
+                <p id="previewText" class="previewText">bit&Byte akademija</p>
+              </div>
+
+              <div class="codeCard">
+                <div class="codeHeader">
+                  <span class="badge">CSS</span>
+                  <div class="codeActions">
+                    <button class="btn" id="copyBtn" type="button">
+                      Kopijuoti
+                    </button>
+                    <button class="btn ghost" id="clearBtn" type="button">
+                      Atkurti
+                    </button>
+                  </div>
+                </div>
+
+                <pre class="codeBlock"><code id="cssOut">.demo {
+  /* pasirink reikšmes apačioje */
+}</code></pre>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container_rules" id="rules">
+          <div class="rule">
+            <h3>color</h3>
+            <p>Nustato teksto spalvą</p>
+            <div class="chips">
+              <button
+                class="chip"
+                data-css="color"
+                data-value="#8c52ff"
+                data-tip="Spalva pagal HEX kodą"
+              >
+                #8c52ff
+              </button>
+              <button
+                class="chip"
+                data-css="color"
+                data-value="rgb(188, 197, 91)"
+                data-tip="Spalva pagal RGB kodą"
+              >
+                rgb(188, 197, 91)
+              </button>
+              <button
+                class="chip"
+                data-css="color"
+                data-value="purple"
+                data-tip="Spalva pagal žodinį pavadinimą"
+              >
+                purple
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
+            <h3>font-size</h3>
+            <p>Nustato šrifto dydį</p>
+            <div class="chips">
+              <button class="chip" data-css="font-size" data-value="16px">
+                16px
+              </button>
+              <button class="chip" data-css="font-size" data-value="22px">
+                22px
+              </button>
+              <button class="chip" data-css="font-size" data-value="32px">
+                32px
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
+            <h3>font-weight</h3>
+            <p>Nustato teksto storį</p>
+            <div class="chips">
+              <button class="chip" data-css="font-weight" data-value="300">
+                300
+              </button>
+              <button class="chip" data-css="font-weight" data-value="600">
+                600
+              </button>
+              <button class="chip" data-css="font-weight" data-value="800">
+                800
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
+            <h3>letter-spacing</h3>
+            <p>Tarpai tarp raidžių</p>
+            <div class="chips">
+              <button class="chip" data-css="letter-spacing" data-value="0">
+                0
+              </button>
+              <button class="chip" data-css="letter-spacing" data-value="1px">
+                1px
+              </button>
+              <button class="chip" data-css="letter-spacing" data-value="3px">
+                3px
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
+            <h3>text-transform</h3>
+            <p>Keičia raidžių formatą</p>
+            <div class="chips">
+              <button class="chip" data-css="text-transform" data-value="none">
+                none
+              </button>
+              <button
+                class="chip"
+                data-css="text-transform"
+                data-value="uppercase"
+                data-tip="Padidinamos visos teksto raidės (a → A)."
+              >
+                uppercase
+              </button>
+              <button
+                class="chip"
+                data-css="text-transform"
+                data-value="capitalize"
+                data-tip="Padidinamos pirmosios žodžių raidės (labas pasauli → Labas Pasauli)."
+              >
+                capitalize
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div style="text-align: center">
+        <p>Svetainė atnaujinta: 2026-02-13</p>
+        <p>Užrašinę parengė: mentorius Aurimas</p>
+      </div>
+    </footer>
   </body>
+  <script src="scripts.js"></script>
 </html>
