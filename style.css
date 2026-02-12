@@ -1,26 +1,31 @@
+/* ============================= */
+/* Global */
+/* ============================= */
+
 * {
   box-sizing: border-box;
-  margin: 0px;
-
+  margin: 0;
   font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background: #f3f4f6;
 }
 
 h2 {
   color: #8c52ff;
-
   font-weight: 800;
   font-size: 30px;
 }
 
 h3 {
-  color: #afb710;
+  color: #a0a811;
   font-weight: 800;
   font-size: 24px;
-
   margin-bottom: 0.5rem;
 }
 
-h4{
+h4 {
   color: #8c52ff;
   font-weight: 800;
   font-size: 20px;
@@ -32,6 +37,10 @@ p {
   font-size: 16px;
 }
 
+/* ============================= */
+/* Header / Footer */
+/* ============================= */
+
 header,
 footer {
   height: 15vh;
@@ -40,15 +49,22 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+
   position: relative;
-  z-index: 1;
+  z-index: 10;
 
-  box-shadow: rgba(100, 100, 111, 0.4) 0px 7px 29px 0px;
-
-  img {
-    height: 100%;
-  }
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.12);
 }
+
+header img,
+footer img {
+  height: 100%;
+}
+
+/* ============================= */
+/* Main Hero Section */
+/* ============================= */
 
 section.mainTitle {
   height: 60vh;
@@ -59,23 +75,6 @@ section.mainTitle {
 
   position: relative;
   overflow: hidden;
-
-  .titleContainer {
-    position: relative;
-    z-index: 1;
-
-    h1 {
-      font-size: 118px;
-      color: white;
-      font-weight: 800;
-    }
-
-    p {
-      color: white;
-      text-align: center;
-      margin-top: 1rem;
-    }
-  }
 }
 
 section.mainTitle::before {
@@ -89,31 +88,238 @@ section.mainTitle::before {
   background-size: cover;
 
   filter: blur(8px);
-  transform: scale(2);
+  transform: scale(1.5);
   z-index: 0;
 }
 
+.titleContainer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.titleContainer h1 {
+  font-size: 118px;
+  color: white;
+  font-weight: 800;
+}
+
+.titleContainer p {
+  color: white;
+  margin-top: 1rem;
+}
+
+/* ============================= */
+/* Main Content */
+/* ============================= */
+
 main {
   margin: 3rem 5rem;
+}
 
+/* Container layout */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  padding: 3rem 4rem;
+  border-radius: 0.5rem;
+
+  background: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.06),
+    0 12px 24px rgba(0, 0, 0, 0.06);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.container_description {
+  position: relative;
+}
+
+.container_rules {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* ============================= */
+/* Rule Cards */
+/* ============================= */
+
+.rule {
+  padding: 16px;
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.06);
+}
+
+/* ============================= */
+/* Builder Preview */
+/* ============================= */
+
+.builder .builder_top {
+  display: grid;
+  gap: 14px;
+  margin-top: 14px;
+}
+
+.previewCard,
+.codeCard {
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.08);
+  padding: 14px;
+}
+
+.previewHeader,
+.codeHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.badge {
+  font-weight: 700;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 999px;
+  background: rgba(140, 82, 255, 0.1);
+  color: #3a1bb0;
+}
+
+.previewText {
+  margin: 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(140, 82, 255, 0.06);
+}
+
+.codeBlock {
+  margin: 0;
+  padding: 14px;
+  border-radius: 12px;
+  background: #1f2329;
+  color: #e6e6e6;
+  overflow: auto;
+  min-height: 130px;
+}
+
+/* ============================= */
+/* Buttons */
+/* ============================= */
+
+.btn {
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background: #ffffff;
+  padding: 8px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  transition: 0.2s ease;
+}
+
+.btn:hover {
+  background: #f3f4f6;
+}
+
+.btn.ghost {
+  background: transparent;
+}
+
+/* ============================= */
+/* Chips */
+/* ============================= */
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.chip {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: #ffffff;
+  padding: 6px 10px;
+  border-radius: 999px;
+  cursor: pointer;
+  font: inherit;
+  position: relative;
+  transition: 0.2s ease;
+}
+
+.chip:hover {
+  border-color: rgba(140, 82, 255, 0.5);
+}
+
+/* Active chip */
+.chip.is-active {
+  border-color: rgba(140, 82, 255, 0.65);
+  box-shadow: 0 0 0 3px rgba(140, 82, 255, 0.15);
+}
+
+/* ============================= */
+/* Tooltip (only if data-tip exists) */
+/* ============================= */
+
+.chip[data-tip]:hover::after {
+  content: attr(data-tip);
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 10px);
+  transform: translateX(-50%);
+  max-width: 260px;
+
+  padding: 8px 10px;
+  border-radius: 10px;
+
+  background: rgba(20, 20, 25, 0.95);
+  color: #ffffff;
+  font-size: 12px;
+  line-height: 1.25;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+  white-space: normal;
+  z-index: 50;
+}
+
+.chip[data-tip]:hover::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: calc(100% + 2px);
+  transform: translateX(-50%);
+
+  border-width: 0 7px 8px 7px;
+  border-style: solid;
+  border-color: transparent transparent rgba(20, 20, 25, 0.95) transparent;
+  z-index: 50;
+}
+
+/* ============================= */
+/* Responsive */
+/* ============================= */
+
+@media (max-width: 900px) {
   .container {
-    padding: 3rem 4rem;
-    border-radius: 0.5rem;
-
-    background: linear-gradient(180deg, #ffffff 0%, #f5f6f8 100%);
-    box-shadow:
-      0 1px 2px rgba(0, 0, 0, 0.06),
-      0 12px 24px rgba(0, 0, 0, 0.06);
-
-    .container_description {
-      margin-bottom: 1rem;
-    }
-
-    .container_rules {
-      .rule {
-        padding: 1rem 0;
-        box-shadow: inset 0 -2px 0 rgba(83, 43, 168, 0.1);
-      }
-    }
+    grid-template-columns: 1fr;
   }
+
+  main {
+    margin: 2rem 1rem;
+  }
+}
+
+.demo {
+  text-transform: none;
+  letter-spacing: 3px;
+  font-weight: 800;
+  color: #8c52ff;
+  font-size: 32px;
 }
