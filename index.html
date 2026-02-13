@@ -24,364 +24,778 @@
       </div>
     </section>
     <main>
-      <section class="container">
-        <div class="container_description">
-          <h2 class="container_title">Teksto stilizavimas</h2>
-          <p class="container_subtitle">
-            Susipažink su teksto redagavimo galimybėmis taikant CSS taisykles.
-          </p>
-          <div class="builder">
-            <div class="builder_top">
-              <div class="previewCard">
-                <div class="previewHeader">
-                  <span class="badge">Demonstracija</span>
-                  <button class="btn ghost" id="resetBtn" type="button">
-                    Atkurti
-                  </button>
-                </div>
-
-                <p id="previewText" class="previewText">bit&Byte akademija</p>
-              </div>
-
-              <div class="codeCard">
-                <div class="codeHeader">
-                  <span class="badge">CSS</span>
-                  <div class="codeActions">
-                    <button class="btn" id="copyBtn" type="button">
-                      Kopijuoti
-                    </button>
-                    <button class="btn ghost" id="clearBtn" type="button">
+      <nav class="topicTabs" aria-label="CSS temos">
+        <button
+          class="topicTab is-active"
+          data-target="topic-text"
+          type="button"
+        >
+          Tekstas
+        </button>
+        <button class="topicTab" data-target="topic-box" type="button">
+          Objektai
+        </button>
+        <button class="topicTab" data-target="topic-box-model" type="button">
+          Box Model
+        </button>
+      </nav>
+      <section id="topic-text" class="topicPanel is-active">
+        <section class="container">
+          <div class="container_description">
+            <h2 class="container_title">Teksto stilizavimas</h2>
+            <p class="container_subtitle">
+              Susipažink su teksto redagavimo galimybėmis taikant CSS taisykles.
+            </p>
+            <div class="builder">
+              <div class="builder_top">
+                <div class="previewCard">
+                  <div class="previewHeader">
+                    <span class="badge">Demonstracija</span>
+                    <button class="btn ghost" id="resetBtn" type="button">
                       Atkurti
                     </button>
                   </div>
+
+                  <p id="previewText" class="previewText">bit&Byte akademija</p>
                 </div>
 
-                <pre class="codeBlock"><code id="cssOut">.demo {
+                <div class="codeCard">
+                  <div class="codeHeader">
+                    <span class="badge">CSS</span>
+                    <div class="codeActions">
+                      <button class="btn" id="copyBtn" type="button">
+                        Kopijuoti
+                      </button>
+                      <button class="btn ghost" id="clearBtn" type="button">
+                        Atkurti
+                      </button>
+                    </div>
+                  </div>
+
+                  <pre class="codeBlock"><code id="cssOut">.demo {
 
 }</code></pre>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="container_rules" id="rules">
-          <div class="rule">
-            <h3>color</h3>
-            <p>Nustato teksto spalvą</p>
-            <div class="chips">
-              <button
-                class="chip"
-                data-css="color"
-                data-value="#8c52ff"
-                data-tip="Spalva pagal HEX kodą"
-              >
-                #8c52ff
-              </button>
-              <button
-                class="chip"
-                data-css="color"
-                data-value="rgb(188, 197, 91)"
-                data-tip="Spalva pagal RGB kodą"
-              >
-                rgb(188, 197, 91)
-              </button>
-              <button
-                class="chip"
-                data-css="color"
-                data-value="purple"
-                data-tip="Spalva pagal žodinį pavadinimą"
-              >
-                purple
-              </button>
+          <div class="container_rules" id="rules">
+            <div class="rule">
+              <h3>color</h3>
+              <p>Nustato teksto spalvą</p>
+              <div class="chips">
+                <button
+                  class="chip"
+                  data-css="color"
+                  data-value="#8c52ff"
+                  data-tip="Spalva pagal HEX kodą"
+                >
+                  #8c52ff
+                </button>
+                <button
+                  class="chip"
+                  data-css="color"
+                  data-value="rgb(188, 197, 91)"
+                  data-tip="Spalva pagal RGB kodą"
+                >
+                  rgb(188, 197, 91)
+                </button>
+                <button
+                  class="chip"
+                  data-css="color"
+                  data-value="purple"
+                  data-tip="Spalva pagal žodinį pavadinimą"
+                >
+                  purple
+                </button>
+              </div>
+              <div class="customControl">
+                <label>
+                  <span>Pasirink spalvą:</span>
+                  <input type="color" id="colorPicker" value="#8c52ff" />
+                </label>
+              </div>
             </div>
-            <div class="customControl">
-              <label>
-                <span>Pasirink spalvą:</span>
-                <input type="color" id="colorPicker" value="#8c52ff" />
-              </label>
+
+            <div class="rule">
+              <h3>font-family</h3>
+              <p>Nustato šrifto tipą</p>
+
+              <div class="chips">
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="'Montserrat', sans-serif"
+                >
+                  Montserrat
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="Arial, sans-serif"
+                >
+                  Arial
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="'Segoe UI', sans-serif"
+                >
+                  Segoe UI
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="Georgia, serif"
+                >
+                  Georgia
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="'Times New Roman', serif"
+                >
+                  Times New Roman
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="'Courier New', monospace"
+                >
+                  Courier New
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="Consolas, monospace"
+                >
+                  Consolas
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="Impact, sans-serif"
+                >
+                  Impact
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="font-family"
+                  data-value="'Comic Sans MS', cursive"
+                >
+                  Comic Sans
+                </button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>font-size</h3>
+              <p>Nustato šrifto dydį</p>
+              <div class="chips">
+                <button class="chip" data-css="font-size" data-value="8px">
+                  8px
+                </button>
+                <button class="chip" data-css="font-size" data-value="16px">
+                  16px
+                </button>
+                <button class="chip" data-css="font-size" data-value="32px">
+                  32px
+                </button>
+                <button class="chip" data-css="font-size" data-value="50px">
+                  50px
+                </button>
+                <button class="chip" data-css="font-size" data-value="85px">
+                  85px
+                </button>
+              </div>
+              <div class="customControl">
+                <label>
+                  <span>Pasirink teksto dydį:</span>
+                  <input
+                    type="range"
+                    id="fontSizeSlider"
+                    min="8"
+                    max="85"
+                    step="1"
+                    value="16"
+                  />
+                  <code><span id="fontSizeValue">16</span>px</code>
+                </label>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>font-weight</h3>
+              <p>Nustato teksto storį</p>
+              <div class="chips">
+                <button class="chip" data-css="font-weight" data-value="100">
+                  100
+                </button>
+                <button class="chip" data-css="font-weight" data-value="300">
+                  300
+                </button>
+                <button class="chip" data-css="font-weight" data-value="600">
+                  600
+                </button>
+                <button class="chip" data-css="font-weight" data-value="800">
+                  800
+                </button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>letter-spacing</h3>
+              <p>Tarpai tarp raidžių</p>
+              <div class="chips">
+                <button class="chip" data-css="letter-spacing" data-value="0">
+                  0
+                </button>
+                <button class="chip" data-css="letter-spacing" data-value="1px">
+                  1px
+                </button>
+                <button class="chip" data-css="letter-spacing" data-value="3px">
+                  3px
+                </button>
+                <button class="chip" data-css="letter-spacing" data-value="8px">
+                  8px
+                </button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>text-transform</h3>
+              <p>Keičia raidžių formatą</p>
+              <div class="chips">
+                <button
+                  class="chip"
+                  data-css="text-transform"
+                  data-value="none"
+                >
+                  none
+                </button>
+                <button
+                  class="chip"
+                  data-css="text-transform"
+                  data-value="uppercase"
+                  data-tip="Padidinamos visos teksto raidės (katė → KATĖ)."
+                >
+                  uppercase
+                </button>
+                <button
+                  class="chip"
+                  data-css="text-transform"
+                  data-value="lowercase"
+                  data-tip="Pamažinamos visos teksto raidės (UOGA → uoga)."
+                >
+                  lowercase
+                </button>
+                <button
+                  class="chip"
+                  data-css="text-transform"
+                  data-value="capitalize"
+                  data-tip="Padidinamos pirmosios žodžių raidės (labas vakaras → Labas Vakaras)."
+                >
+                  capitalize
+                </button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>text-align</h3>
+              <p>Nustato teksto lygiavimą</p>
+
+              <div class="chips">
+                <button
+                  class="chip"
+                  data-css="text-align"
+                  data-value="left"
+                  data-tip="Tekstas lygiuojamas kairėje pusėje."
+                >
+                  left
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="text-align"
+                  data-value="center"
+                  data-tip="Tekstas centruojamas."
+                >
+                  center
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="text-align"
+                  data-value="right"
+                  data-tip="Tekstas lygiuojamas dešinėje pusėje."
+                >
+                  right
+                </button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>text-decoration</h3>
+              <p>Prideda dekoraciją tekstui</p>
+
+              <div class="chips">
+                <button
+                  class="chip"
+                  data-css="text-decoration"
+                  data-value="none"
+                  data-tip="Pašalinamos teksto dekoracijos ."
+                >
+                  none
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="text-decoration"
+                  data-value="underline"
+                  data-tip="Pabraukia tekstą."
+                >
+                  underline
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="text-decoration"
+                  data-value="overline"
+                  data-tip="Pabraukia tekstą viršuje."
+                >
+                  overline
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="text-decoration"
+                  data-value="line-through"
+                  data-tip="Perbraukia tekstą."
+                >
+                  line-through
+                </button>
+                <button
+                  class="chip"
+                  data-css="text-decoration"
+                  data-value="underline red wavy"
+                  data-tip="text-decoration stiliams galima nurodyti ir spalvas, ir stilius"
+                >
+                  underline red wavy
+                </button>
+                <button
+                  class="chip"
+                  data-css="text-decoration"
+                  data-value="underline overline"
+                  data-tip="text-decoration taisykles galima kombinuoti"
+                >
+                  underline overline
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <section id="topic-box" class="topicPanel">
+        <section class="container container--twoCol">
+          <div class="container_description">
+            <h2>Objektų stilizavimas</h2>
+            <p>Eksperimentuok su blokų (div) stilizavimu.</p>
+
+            <div class="builder">
+              <div class="builder_top">
+                <div class="previewCard">
+                  <div class="previewHeader">
+                    <span class="badge">Demonstracija</span>
+                    <button class="btn ghost" id="boxResetBtn" type="button">
+                      Atkurti
+                    </button>
+                  </div>
+
+                  <div class="boxPreviewWrapper">
+                    <div id="previewBox" class="previewBox"></div>
+                  </div>
+                </div>
+
+                <div class="codeCard">
+                  <div class="codeHeader">
+                    <span class="badge">CSS</span>
+                  </div>
+
+                  <pre class="codeBlock">
+<code id="boxCssOut">.box {
+
+}</code>
+            </pre>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="rule">
-            <h3>font-family</h3>
-            <p>Nustato šrifto tipą</p>
+          <div class="container_rules" id="boxRules">
+            <div class="rule">
+              <h3>width</h3>
+              <p>Nustato objekto plotį</p>
 
-            <div class="chips">
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="'Montserrat', sans-serif"
-              >
-                Montserrat
-              </button>
+              <div class="customControl">
+                <label>
+                  <span>Plotis:</span>
+                  <input type="number" id="boxWidthInput" min="0" value="150" />
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="Arial, sans-serif"
-              >
-                Arial
-              </button>
+                  <select id="boxWidthUnit">
+                    <option value="px">px</option>
+                    <option value="%">%</option>
+                    <option value="vw">vw</option>
+                    <option value="vh">vh</option>
+                  </select>
+                </label>
+              </div>
+            </div>
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="'Segoe UI', sans-serif"
-              >
-                Segoe UI
-              </button>
+            <div class="rule">
+              <h3>height</h3>
+              <p>Nustato objekto aukštį</p>
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="Georgia, serif"
-              >
-                Georgia
-              </button>
+              <div class="customControl">
+                <label>
+                  <span>Aukštis:</span>
+                  <input
+                    type="number"
+                    id="boxHeightInput"
+                    min="0"
+                    value="150"
+                  />
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="'Times New Roman', serif"
-              >
-                Times New Roman
-              </button>
+                  <select id="boxHeightUnit">
+                    <option value="px">px</option>
+                    <option value="%">%</option>
+                    <option value="vh">vh</option>
+                    <option value="vw">vw</option>
+                  </select>
+                </label>
+              </div>
+            </div>
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="'Courier New', monospace"
-              >
-                Courier New
-              </button>
+            <div class="rule">
+              <h3>background-color</h3>
+              <p>Nustato objekto spalvą</p>
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="Consolas, monospace"
-              >
-                Consolas
-              </button>
+              <div class="customControl">
+                <label>
+                  <span>Spalva:</span>
+                  <input type="color" id="boxBgPicker" value="#8c52ff" />
+                </label>
+              </div>
+            </div>
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="Impact, sans-serif"
-              >
-                Impact
-              </button>
+            <div class="rule">
+              <h3>border</h3>
+              <p>Nustato objekto rėmelio stilių</p>
 
-              <button
-                class="chip"
-                data-css="font-family"
-                data-value="'Comic Sans MS', cursive"
+              <div class="customControl">
+                <label>
+                  <span>Spalva:</span>
+                  <input type="color" id="boxBorderColor" value="#000000" />
+                </label>
+              </div>
+
+              <div class="customControl">
+                <label>
+                  <span>Storis (px):</span>
+                  <input
+                    type="range"
+                    id="boxBorderWidth"
+                    min="0"
+                    max="20"
+                    step="1"
+                    value="0"
+                  />
+                  <code><span id="boxBorderWidthValue">0</span>px</code>
+                </label>
+              </div>
+
+              <div class="chips">
+                <button class="chip" data-border-style="solid">solid</button>
+                <button class="chip" data-border-style="dashed">dashed</button>
+                <button class="chip" data-border-style="dotted">dotted</button>
+                <button class="chip" data-border-style="double">double</button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>border-radius</h3>
+              <p>Suapvalina objektą</p>
+              <div class="chips">
+                <button class="chip" data-css="border-radius" data-value="0">
+                  0
+                </button>
+                <button class="chip" data-css="border-radius" data-value="10px">
+                  10px
+                </button>
+                <button class="chip" data-css="border-radius" data-value="30px">
+                  30px
+                </button>
+                <button class="chip" data-css="border-radius" data-value="50%">
+                  50%
+                </button>
+              </div>
+            </div>
+
+            <div class="rule">
+              <h3>box-shadow</h3>
+              <p>Suteikia objektui šešėlį</p>
+              <div class="chips">
+                <button class="chip" data-css="box-shadow" data-value="none">
+                  none
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="box-shadow"
+                  data-value="0 4px 10px rgba(0,0,0,0.2)"
+                >
+                  soft
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="box-shadow"
+                  data-value="0 10px 30px rgba(0,0,0,0.3)"
+                >
+                  large
+                </button>
+
+                <button
+                  class="chip"
+                  data-css="box-shadow"
+                  data-value="inset 0 0 10px rgba(0,0,0,0.4)"
+                >
+                  inset
+                </button>
+              </div>
+
+              <a
+                href="https://cssgenerator.pl/en/box-shadow-generator/"
+                target="_blank"
+                rel="noopener"
+                class="externalToolLink"
               >
-                Comic Sans
-              </button>
+                Rekomenduojamas įrankis šešėlių kūrimui ↗
+              </a>
+            </div>
+
+            <div class="rule">
+              <h3>opacity</h3>
+              <p>Nustato objekto permatomumą</p>
+
+              <div class="customControl">
+                <label>
+                  <span>Skaidrumas:</span>
+                  <input
+                    type="range"
+                    id="boxOpacity"
+                    min="0"
+                    max="1"
+                    step="0.01"
+                    value="1"
+                  />
+                  <code><span id="boxOpacityValue">1</span></code>
+                </label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <section id="topic-box-model" class="topicPanel">
+        <section class="container container--twoCol">
+          <div class="container_description">
+            <h2>Box Model</h2>
+            <p>Suprask kaip veikia content, padding, border ir margin.</p>
+
+            <div class="builder">
+              <div class="builder_top">
+                <div class="previewCard">
+                  <div class="previewHeader">
+                    <span class="badge">Demonstracija</span>
+                    <button
+                      class="btn ghost"
+                      id="boxModelResetBtn"
+                      type="button"
+                    >
+                      Atkurti
+                    </button>
+                  </div>
+
+                  <div class="boxModelPreviewWrapper">
+                    <div class="bmStage" id="bmStage">
+                      <div id="boxModelMargin" class="bm-margin">
+                        <div id="boxModelBorder" class="bm-border">
+                          <div id="boxModelPadding" class="bm-padding">
+                            <div id="boxModelContent" class="bm-content">
+                              Mygtukas
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="bmStats">
+                    <span class="badge">Iš viso:</span>
+                    <code id="bmTotalOut">–</code>
+                  </div>
+                </div>
+
+                <div class="codeCard">
+                  <div class="codeHeader">
+                    <span class="badge">CSS</span>
+                  </div>
+
+                  <pre class="codeBlock">
+<code id="boxModelCssOut">.box {
+
+}</code>
+            </pre>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="rule">
-            <h3>font-size</h3>
-            <p>Nustato šrifto dydį</p>
-            <div class="chips">
-              <button class="chip" data-css="font-size" data-value="8px">
-                8px
-              </button>
-              <button class="chip" data-css="font-size" data-value="16px">
-                16px
-              </button>
-              <button class="chip" data-css="font-size" data-value="32px">
-                32px
-              </button>
-              <button class="chip" data-css="font-size" data-value="50px">
-                50px
-              </button>
-              <button class="chip" data-css="font-size" data-value="85px">
-                85px
-              </button>
+          <div class="container_rules" id="boxModelRules">
+            <div class="rule">
+              <h3>padding</h3>
+
+              <div class="bmGrid">
+                <label class="bmRow">
+                  <span>top</span>
+                  <input
+                    type="range"
+                    id="bmPaddingTop"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmPaddingTopValue">20</span>px</code>
+                </label>
+
+                <label class="bmRow">
+                  <span>right</span>
+                  <input
+                    type="range"
+                    id="bmPaddingRight"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmPaddingRightValue">20</span>px</code>
+                </label>
+
+                <label class="bmRow">
+                  <span>bottom</span>
+                  <input
+                    type="range"
+                    id="bmPaddingBottom"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmPaddingBottomValue">20</span>px</code>
+                </label>
+
+                <label class="bmRow">
+                  <span>left</span>
+                  <input
+                    type="range"
+                    id="bmPaddingLeft"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmPaddingLeftValue">20</span>px</code>
+                </label>
+              </div>
             </div>
-            <div class="customControl">
-              <label>
-                <span>Pasirink teksto dydį:</span>
-                <input
-                  type="range"
-                  id="fontSizeSlider"
-                  min="8"
-                  max="85"
-                  step="1"
-                  value="16"
-                />
-                <code><span id="fontSizeValue">16</span>px</code>
-              </label>
+
+            <div class="rule">
+              <h3>margin</h3>
+
+              <div class="bmGrid">
+                <label class="bmRow">
+                  <span>top</span>
+                  <input
+                    type="range"
+                    id="bmMarginTop"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmMarginTopValue">20</span>px</code>
+                </label>
+
+                <label class="bmRow">
+                  <span>right</span>
+                  <input
+                    type="range"
+                    id="bmMarginRight"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmMarginRightValue">20</span>px</code>
+                </label>
+
+                <label class="bmRow">
+                  <span>bottom</span>
+                  <input
+                    type="range"
+                    id="bmMarginBottom"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmMarginBottomValue">20</span>px</code>
+                </label>
+
+                <label class="bmRow">
+                  <span>left</span>
+                  <input
+                    type="range"
+                    id="bmMarginLeft"
+                    min="0"
+                    max="100"
+                    value="20"
+                  />
+                  <code><span id="bmMarginLeftValue">20</span>px</code>
+                </label>
+              </div>
             </div>
-          </div>
 
-          <div class="rule">
-            <h3>font-weight</h3>
-            <p>Nustato teksto storį</p>
-            <div class="chips">
-              <button class="chip" data-css="font-weight" data-value="100">
-                100
-              </button>
-              <button class="chip" data-css="font-weight" data-value="300">
-                300
-              </button>
-              <button class="chip" data-css="font-weight" data-value="600">
-                600
-              </button>
-              <button class="chip" data-css="font-weight" data-value="800">
-                800
-              </button>
-            </div>
-          </div>
-
-          <div class="rule">
-            <h3>letter-spacing</h3>
-            <p>Tarpai tarp raidžių</p>
-            <div class="chips">
-              <button class="chip" data-css="letter-spacing" data-value="0">
-                0
-              </button>
-              <button class="chip" data-css="letter-spacing" data-value="1px">
-                1px
-              </button>
-              <button class="chip" data-css="letter-spacing" data-value="3px">
-                3px
-              </button>
-              <button class="chip" data-css="letter-spacing" data-value="8px">
-                8px
-              </button>
-            </div>
-          </div>
-
-          <div class="rule">
-            <h3>text-transform</h3>
-            <p>Keičia raidžių formatą</p>
-            <div class="chips">
-              <button class="chip" data-css="text-transform" data-value="none">
-                none
-              </button>
-              <button
-                class="chip"
-                data-css="text-transform"
-                data-value="uppercase"
-                data-tip="Padidinamos visos teksto raidės (katė → KATĖ)."
-              >
-                uppercase
-              </button>
-              <button
-                class="chip"
-                data-css="text-transform"
-                data-value="lowercase"
-                data-tip="Pamažinamos visos teksto raidės (UOGA → uoga)."
-              >
-                lowercase
-              </button>
-              <button
-                class="chip"
-                data-css="text-transform"
-                data-value="capitalize"
-                data-tip="Padidinamos pirmosios žodžių raidės (labas vakaras → Labas Vakaras)."
-              >
-                capitalize
-              </button>
-            </div>
-          </div>
-
-          <div class="rule">
-            <h3>text-align</h3>
-            <p>Nustato teksto lygiavimą</p>
-
-            <div class="chips">
-              <button
-                class="chip"
-                data-css="text-align"
-                data-value="left"
-                data-tip="Tekstas lygiuojamas kairėje pusėje."
-              >
-                left
-              </button>
-
-              <button
-                class="chip"
-                data-css="text-align"
-                data-value="center"
-                data-tip="Tekstas centruojamas."
-              >
-                center
-              </button>
-
-              <button
-                class="chip"
-                data-css="text-align"
-                data-value="right"
-                data-tip="Tekstas lygiuojamas dešinėje pusėje."
-              >
-                right
-              </button>
+            <div class="rule">
+              <h3>border-width</h3>
+              <div class="customControl">
+                <label>
+                  <span>Border (px):</span>
+                  <input
+                    type="range"
+                    id="bmBorderWidth"
+                    min="0"
+                    max="30"
+                    value="5"
+                  />
+                  <code><span id="bmBorderWidthValue">5</span>px</code>
+                </label>
+              </div>
             </div>
           </div>
-
-          <div class="rule">
-            <h3>text-decoration</h3>
-            <p>Prideda dekoraciją tekstui</p>
-
-            <div class="chips">
-              <button
-                class="chip"
-                data-css="text-decoration"
-                data-value="none"
-                data-tip="Pašalinamos teksto dekoracijos ."
-              >
-                none
-              </button>
-
-              <button
-                class="chip"
-                data-css="text-decoration"
-                data-value="underline"
-                data-tip="Pabraukia tekstą."
-              >
-                underline
-              </button>
-
-              <button
-                class="chip"
-                data-css="text-decoration"
-                data-value="overline"
-                data-tip="Pabraukia tekstą viršuje."
-              >
-                overline
-              </button>
-
-              <button
-                class="chip"
-                data-css="text-decoration"
-                data-value="line-through"
-                data-tip="Perbraukia tekstą."
-              >
-                line-through
-              </button>
-              <button
-                class="chip"
-                data-css="text-decoration"
-                data-value="underline red wavy"
-                data-tip="text-decoration stiliams galima nurodyti ir spalvas, ir stilius"
-              >
-                underline red wavy
-              </button>
-              <button
-                class="chip"
-                data-css="text-decoration"
-                data-value="underline overline"
-                data-tip="text-decoration taisykles galima kombinuoti"
-              >
-                underline overline
-              </button>
-            </div>
-          </div>
-        </div>
+        </section>
       </section>
     </main>
     <footer>
@@ -392,4 +806,5 @@
     </footer>
   </body>
   <script src="scripts.js"></script>
+  <script src="box-model.js" defer></script>
 </html>
