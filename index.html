@@ -57,7 +57,7 @@
                 </div>
 
                 <pre class="codeBlock"><code id="cssOut">.demo {
-  /* pasirink reikšmes apačioje */
+
 }</code></pre>
               </div>
             </div>
@@ -97,17 +97,57 @@
           </div>
 
           <div class="rule">
+            <h3>font-family</h3>
+            <p>Nustato šrifto tipą</p>
+
+            <div class="chips">
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="'Montserrat', sans-serif"
+                data-tip="Sans-serif šriftas be dekoratyvinių brūkšnelių."
+              >
+                Montserrat
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="'Georgia', serif"
+                data-tip="Serif šriftas su mažais brūkšneliais raidžių galuose."
+              >
+                Georgia
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="'Courier New', monospace"
+                data-tip="Monospace – visos raidės vienodo pločio."
+              >
+                Courier
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
             <h3>font-size</h3>
             <p>Nustato šrifto dydį</p>
             <div class="chips">
+              <button class="chip" data-css="font-size" data-value="8px">
+                8px
+              </button>
               <button class="chip" data-css="font-size" data-value="16px">
                 16px
               </button>
-              <button class="chip" data-css="font-size" data-value="22px">
-                22px
-              </button>
               <button class="chip" data-css="font-size" data-value="32px">
                 32px
+              </button>
+              <button class="chip" data-css="font-size" data-value="50px">
+                50px
+              </button>
+              <button class="chip" data-css="font-size" data-value="92px">
+                92px
               </button>
             </div>
           </div>
@@ -116,6 +156,9 @@
             <h3>font-weight</h3>
             <p>Nustato teksto storį</p>
             <div class="chips">
+              <button class="chip" data-css="font-weight" data-value="100">
+                100
+              </button>
               <button class="chip" data-css="font-weight" data-value="300">
                 300
               </button>
@@ -141,6 +184,9 @@
               <button class="chip" data-css="letter-spacing" data-value="3px">
                 3px
               </button>
+              <button class="chip" data-css="letter-spacing" data-value="8px">
+                8px
+              </button>
             </div>
           </div>
 
@@ -155,17 +201,118 @@
                 class="chip"
                 data-css="text-transform"
                 data-value="uppercase"
-                data-tip="Padidinamos visos teksto raidės (a → A)."
+                data-tip="Padidinamos visos teksto raidės (katė → KATĖ)."
               >
                 uppercase
               </button>
               <button
                 class="chip"
                 data-css="text-transform"
+                data-value="lowercase"
+                data-tip="Pamažinamos visos teksto raidės (UOGA → uoga)."
+              >
+                lowercase
+              </button>
+              <button
+                class="chip"
+                data-css="text-transform"
                 data-value="capitalize"
-                data-tip="Padidinamos pirmosios žodžių raidės (labas pasauli → Labas Pasauli)."
+                data-tip="Padidinamos pirmosios žodžių raidės (labas vakaras → Labas Vakaras)."
               >
                 capitalize
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
+            <h3>text-align</h3>
+            <p>Nustato teksto lygiavimą</p>
+
+            <div class="chips">
+              <button
+                class="chip"
+                data-css="text-align"
+                data-value="left"
+                data-tip="Tekstas lygiuojamas kairėje pusėje."
+              >
+                left
+              </button>
+
+              <button
+                class="chip"
+                data-css="text-align"
+                data-value="center"
+                data-tip="Tekstas centruojamas."
+              >
+                center
+              </button>
+
+              <button
+                class="chip"
+                data-css="text-align"
+                data-value="right"
+                data-tip="Tekstas lygiuojamas dešinėje pusėje."
+              >
+                right
+              </button>
+            </div>
+          </div>
+
+          <div class="rule">
+            <h3>text-decoration</h3>
+            <p>Prideda dekoraciją tekstui</p>
+
+            <div class="chips">
+              <button
+                class="chip"
+                data-css="text-decoration"
+                data-value="none"
+                data-tip="Pašalinamos teksto dekoracijos ."
+              >
+                none
+              </button>
+
+              <button
+                class="chip"
+                data-css="text-decoration"
+                data-value="underline"
+                data-tip="Pabraukia tekstą."
+              >
+                underline
+              </button>
+
+              <button
+                class="chip"
+                data-css="text-decoration"
+                data-value="overline"
+                data-tip="Pabraukia tekstą viršuje."
+              >
+                overline
+              </button>
+
+              <button
+                class="chip"
+                data-css="text-decoration"
+                data-value="line-through"
+                data-tip="Perbraukia tekstą."
+              >
+                line-through
+              </button>
+              <button
+                class="chip"
+                data-css="text-decoration"
+                data-value="underline red wavy"
+                data-tip="text-decoration stiliams galima nurodyti ir spalvas, ir stilius"
+              >
+                underline red wavy
+              </button>
+              <button
+                class="chip"
+                data-css="text-decoration"
+                data-value="underline overline"
+                data-tip="text-decoration taisykles galima kombinuoti"
+              >
+                underline overline
               </button>
             </div>
           </div>

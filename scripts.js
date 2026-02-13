@@ -13,6 +13,10 @@ const cssToJs = {
   "font-weight": "fontWeight",
   "letter-spacing": "letterSpacing",
   "text-transform": "textTransform",
+
+  "font-family": "fontFamily",
+  "text-align": "textAlign",
+  "text-decoration": "textDecoration",
 };
 
 function renderCSS() {
@@ -20,7 +24,7 @@ function renderCSS() {
     .map(([prop, val]) => `  ${prop}: ${val};`)
     .join("\n");
 
-  cssOut.textContent = `.demo {\n${lines || "  /* pasirink reikšmes apačioje */"}\n}`;
+  cssOut.textContent = `.demo {\n${lines || ""}\n}`;
 }
 
 function applyPreview(prop, value) {
