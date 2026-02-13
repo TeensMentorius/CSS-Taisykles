@@ -94,6 +94,12 @@
                 purple
               </button>
             </div>
+            <div class="customControl">
+              <label>
+                <span>Pasirink spalvą:</span>
+                <input type="color" id="colorPicker" value="#8c52ff" />
+              </label>
+            </div>
           </div>
 
           <div class="rule">
@@ -105,7 +111,6 @@
                 class="chip"
                 data-css="font-family"
                 data-value="'Montserrat', sans-serif"
-                data-tip="Sans-serif šriftas be dekoratyvinių brūkšnelių."
               >
                 Montserrat
               </button>
@@ -113,8 +118,23 @@
               <button
                 class="chip"
                 data-css="font-family"
-                data-value="'Georgia', serif"
-                data-tip="Serif šriftas su mažais brūkšneliais raidžių galuose."
+                data-value="Arial, sans-serif"
+              >
+                Arial
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="'Segoe UI', sans-serif"
+              >
+                Segoe UI
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="Georgia, serif"
               >
                 Georgia
               </button>
@@ -122,10 +142,41 @@
               <button
                 class="chip"
                 data-css="font-family"
-                data-value="'Courier New', monospace"
-                data-tip="Monospace – visos raidės vienodo pločio."
+                data-value="'Times New Roman', serif"
               >
-                Courier
+                Times New Roman
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="'Courier New', monospace"
+              >
+                Courier New
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="Consolas, monospace"
+              >
+                Consolas
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="Impact, sans-serif"
+              >
+                Impact
+              </button>
+
+              <button
+                class="chip"
+                data-css="font-family"
+                data-value="'Comic Sans MS', cursive"
+              >
+                Comic Sans
               </button>
             </div>
           </div>
@@ -146,9 +197,23 @@
               <button class="chip" data-css="font-size" data-value="50px">
                 50px
               </button>
-              <button class="chip" data-css="font-size" data-value="92px">
-                92px
+              <button class="chip" data-css="font-size" data-value="85px">
+                85px
               </button>
+            </div>
+            <div class="customControl">
+              <label>
+                <span>Pasirink teksto dydį:</span>
+                <input
+                  type="range"
+                  id="fontSizeSlider"
+                  min="8"
+                  max="85"
+                  step="1"
+                  value="16"
+                />
+                <code><span id="fontSizeValue">16</span>px</code>
+              </label>
             </div>
           </div>
 
